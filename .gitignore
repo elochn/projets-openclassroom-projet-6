@@ -6,3 +6,6 @@ Projet+Mise+en+prod+-+home-credit-default-risk/
 __pycache__/
 *.pyc
 mlruns/
+runs/
+mlflow.db
+brouillon.ipynb
