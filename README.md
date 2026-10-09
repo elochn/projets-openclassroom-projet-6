@@ -17,14 +17,16 @@ model, optimise it on a business cost, and track every experiment with MLflow.
 ## Final model
 
 LightGBM inside a scikit-learn Pipeline (imputation, scaling, one-hot encoding),
-registered in MLflow as `credit_scoring_model`, alias `champion` (version 6).
+trained on the 60 most important features selected with SHAP. Registered in MLflow
+as `credit_scoring_model`, alias `champion` (version 8). It costs 0.7 % more than
+the full 422-feature model, for 7 times fewer input columns.
 
 | Metric (validation set) | Value |
 |---|---|
-| Business cost per client | 0.4909 |
-| Decision threshold | 0.52 |
-| ROC AUC | 0.7844 |
-| PR AUC | 0.2845 |
+| Business cost per client | 0.4943 |
+| Decision threshold | 0.54 |
+| ROC AUC | 0.7832 |
+| PR AUC | 0.2813 |
 
 ## MLflow tracking
 
@@ -35,7 +37,7 @@ registered in MLflow as `credit_scoring_model`, alias `champion` (version 6).
 ## Repository
 
     Projet_6.ipynb    full pipeline: exploration, aggregation, modelling, SHAP, MLflow
-    docs/screenshots  MLflow UI screenshots
+    screenshots/      MLflow UI screenshots
 
 ## How to run
 
